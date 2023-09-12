@@ -58,6 +58,7 @@ div.text{
 	margin: 10px;
 	line-height: 1.5;
 	padding:10px;
+	border-bottom: 2px solid white;
 }
 li{
 	list-style: none;
@@ -75,15 +76,18 @@ div.input{
 	margin: 10px;
 	background: none;
 	text-align: center;
+	padding:10px;
+	border-bottom: 2px solid white;
+	border-top: 2px solid white;
 }
 input{
 	min-width: 300px;
 	padding:6px;
 	border-radius: 20px;
-	box-shadow: 2px 2px 30px white;
 	background:none;
 	color: white;
 	border: none;
+	box-shadow: 2px 2px 80px white;
 	border-bottom: 2px solid black;
 }
 button{
@@ -92,6 +96,9 @@ button{
 	border-radius: 20px;
 	background: rgba(0,0,0,0.5); 
 	color: white
+}
+input::placeholder{
+	color: white;
 }
 button:hover{
 	background: white;
@@ -105,76 +112,3 @@ a{
 a:hover{
 	font-weight: bold;
 }
-
-
-
-
-
-/* Reset some default browser styles */
-
-/*body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-.container {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333; 
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333; 
-}
-
-span {
-    color: #007BFF;
-}
-
-.img-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.img1, .img2 {
-    flex: 1;
-    text-align: center;
-    margin: 20px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #007BFF;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #666;
-}*/
