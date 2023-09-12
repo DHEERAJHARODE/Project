@@ -36,8 +36,10 @@
 	<div class="footer-container">
 		<div class="text">
 			<div class="input">
-				<input type="email" placeholder="Your e-mail">
-				<button type="submit">Subscribe Now</button>
+				<input type="email" id="email" placeholder="Your Email">
+				<button type="submit" id="subscribeButton">Subscribe Now</button>
+				  <p id="successMessage" style="color: rgb(173, 255, 47); display: none;font-size: 23px; font-weight: bold;">Thank you for subscribing!</p>
+    			  <p id="errorMessage" style="color: red;font-weight: bold; font-size: 23px; display: none;">Please enter a valid email address ending with '@gmail.com'.</p>
 			</div><br>
 			<ul>
 				<div>
@@ -57,7 +59,7 @@
 					<li><b>Support</b></li>
 					<br>
 					<li><a href="#">Support Request</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRvwLqFKhShLHNJWVmSFjwXDDwvrDkcvFrkRxWJwmHRNWKGdHbZSLslvggKXqNCDKSRxxcl">Contact</a></li>
 				</div>
 			</ul>
 		</div>
@@ -66,5 +68,34 @@
   		</div>
 	</div>
 </footer>
+<script>
+        // JavaScript function to validate the email and display messages
+        function validateEmailAndDisplayMessage() {
+            const emailInput = document.getElementById('email');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            const emailPattern = /@gmail\.com$/;
+
+            // Check if the email matches the pattern
+            if (emailPattern.test(emailInput.value)) {
+                successMessage.style.display = 'block';
+                errorMessage.style.display = 'none';
+                setTimeout(function () {
+                    successMessage.style.display = 'none';
+                }, 3000);
+            }else {
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'block';
+                setTimeout(function () {
+                    errorMessage.style.display = 'none';
+                }, 3000);
+            }
+            emailInput.value = '';
+        }
+
+        // Add a click event listener to the Subscribe button
+        const subscribeButton = document.getElementById('subscribeButton');
+        subscribeButton.addEventListener('click', validateEmailAndDisplayMessage);
+</script>
 </body>
 </html>
